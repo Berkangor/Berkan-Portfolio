@@ -8,28 +8,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script defer data-domain="berkangor.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <h1>Berkan Görmüş</h1>
-      <p class="role">Full‑Stack Developer</p>
-      <div class="meta">
-        <a href="tel:+905069032299">+90 (506) 903 22 99</a>
-        <span>•</span>
-        <a href="mailto:berkangrms@outlook.com">berkangrms@outlook.com</a>
-        <span>•</span>
-        <span>İzmir / Turkey</span>
-        <span>•</span>
-        <a target="_blank" href="https://linkedin.com/in/berkangormus">LinkedIn</a>
-        <span>•</span>
-        <a target="_blank" href="https://github.com/Berkangor">GitHub</a>
+      <div class="topbar">
+        <div class="identity">
+          <h1>Berkan Görmüş</h1>
+          <p class="role" data-i18n="header.role">Full‑Stack Developer</p>
+          <div class="meta">
+            <a href="tel:+905069032299">+90 (506) 903 22 99</a>
+            <span>•</span>
+            <a href="mailto:berkangrms@outlook.com">berkangrms@outlook.com</a>
+            <span>•</span>
+            <span>İzmir / Turkey</span>
+            <span>•</span>
+            <a target="_blank" href="https://linkedin.com/in/berkangormus">LinkedIn</a>
+            <span>•</span>
+            <a target="_blank" href="https://github.com/Berkangor">GitHub</a>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="segmented" id="langSwitch" title="Language">
+            <button data-lang="tr">TR</button>
+            <button data-lang="en">EN</button>
+          </div>
+          <button id="themeToggle" class="btn" title="Toggle light/dark">🌙</button>
+          <div class="swatches" title="Accent color">
+            <button class="swatch" data-color="#60a5fa" style="--c:#60a5fa" aria-label="Blue"></button>
+            <button class="swatch" data-color="#16a34a" style="--c:#16a34a" aria-label="Green"></button>
+            <button class="swatch" data-color="#7c3aed" style="--c:#7c3aed" aria-label="Purple"></button>
+            <button class="swatch" data-color="#ea580c" style="--c:#ea580c" aria-label="Orange"></button>
+            <button class="swatch" data-color="#dc2626" style="--c:#dc2626" aria-label="Red"></button>
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="section">
-      <h2>Professional Summary</h2>
-      <p>
+      <h2 data-i18n="summary.title">Professional Summary</h2>
+      <p data-i18n="summary.text">
         I’m a curious and determined Junior Full‑Stack Developer who enjoys turning what I learn into real, working projects.
         My foundation in Frontend (React, React Native) is growing stronger every day, while I expand my Backend skills
         (Node.js, Express.js) with the same enthusiasm. I care about clean, understandable code and I learn fast—especially
@@ -38,42 +57,29 @@
     </section>
 
     <section class="section">
-      <h2>Skills</h2>
+      <h2 data-i18n="skills.title">Skills</h2>
       <div class="grid">
         <div class="card">
-          <h3>Frontend Development</h3>
-          <ul>
-            <li>React, React Native, JavaScript (ES6+), HTML5, CSS3, Tailwind, Vite</li>
-            <li>Component‑based architecture; state (useState, useEffect, Context, Redux)</li>
-            <li>Responsive design, mobile UI/UX, cross‑platform development</li>
-          </ul>
+          <h3 data-i18n="skills.frontend.title">Frontend Development</h3>
+          <div data-i18n-html="skills.frontend.html"></div>
         </div>
         <div class="card">
-          <h3>Backend Development</h3>
-          <ul>
-            <li>Node.js, Express.js, MongoDB, PostgreSQL</li>
-            <li>REST API design & integration; auth (JWT); async (fetch, async/await)</li>
-          </ul>
+          <h3 data-i18n="skills.backend.title">Backend Development</h3>
+          <div data-i18n-html="skills.backend.html"></div>
         </div>
         <div class="card">
-          <h3>Tools & Deployment</h3>
-          <ul>
-            <li>Git, GitHub, Firebase, Vercel, Render</li>
-            <li>Branching & PRs, CI/CD, debugging & testing</li>
-          </ul>
+          <h3 data-i18n="skills.tools.title">Tools & Deployment</h3>
+          <div data-i18n-html="skills.tools.html"></div>
         </div>
         <div class="card">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Problem solving, analytical thinking, teamwork & communication</li>
-            <li>Self‑learning, time management, attention to detail</li>
-          </ul>
+          <h3 data-i18n="skills.soft.title">Soft Skills</h3>
+          <div data-i18n-html="skills.soft.html"></div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Projects</h2>
+      <h2 data-i18n="projects.title">Projects</h2>
       <div class="projects">
         <article class="project">
           <div class="project-head">
@@ -82,14 +88,9 @@
               <span>React Native</span><span>Expo</span><span>Firebase</span><span>Tailwind</span>
             </div>
           </div>
-          <ul>
-            <li>Mobile exam prep app for pilots (React Native + Expo)</li>
-            <li>Firebase auth (register/login)</li>
-            <li>Quiz modules with instant feedback & scoring</li>
-            <li>Responsive, mobile‑first UI</li>
-          </ul>
+          <div data-i18n-html="projects.flightready.html"></div>
           <div class="links">
-            <a target="_blank" href="https://github.com/Berkangor/flightready">GitHub</a>
+            <a target="_blank" href="https://github.com/Berkangor/flightready" data-i18n="labels.github">GitHub</a>
           </div>
         </article>
 
@@ -100,15 +101,10 @@
               <span>React</span><span>JavaScript</span><span>REST API</span>
             </div>
           </div>
-          <ul>
-            <li>Currency conversion module in React</li>
-            <li>Hourly exchange rates from external API</li>
-            <li>Real‑time conversion with hooks (useEffect/state)</li>
-            <li>Error handling + responsive UI</li>
-          </ul>
+          <div data-i18n-html="projects.moneyguard.html"></div>
           <div class="links">
-            <a target="_blank" href="https://guardiansofmoney-react-project-sden.vercel.app/">Live Demo</a>
-            <a target="_blank" href="https://github.com/GUARDIANSOFMONEYS/GUARDIANSOFMONEY-ReactProject">GitHub</a>
+            <a target="_blank" href="https://guardiansofmoney-react-project-sden.vercel.app/" data-i18n="labels.demo">Live Demo</a>
+            <a target="_blank" href="https://github.com/GUARDIANSOFMONEYS/GUARDIANSOFMONEY-ReactProject" data-i18n="labels.github">GitHub</a>
           </div>
         </article>
 
@@ -119,47 +115,38 @@
               <span>React</span><span>CSS Architecture</span>
             </div>
           </div>
-          <ul>
-            <li>Modular CSS + reusable UI components</li>
-            <li>Cross‑browser compatible, mobile‑first</li>
-            <li>Layout optimizations & testing support</li>
-          </ul>
+          <div data-i18n-html="projects.greenharvest.html"></div>
           <div class="links">
-            <a target="_blank" href="https://green-harvest-coders.github.io/GreenHarvest/">Live Demo</a>
-            <a target="_blank" href="https://github.com/Green-Harvest-Coders/GreenHarvest">GitHub</a>
+            <a target="_blank" href="https://green-harvest-coders.github.io/GreenHarvest/" data-i18n="labels.demo">Live Demo</a>
+            <a target="_blank" href="https://github.com/Green-Harvest-Coders/GreenHarvest" data-i18n="labels.github">GitHub</a>
           </div>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2>Work Experience</h2>
+      <h2 data-i18n="experience.title">Work Experience</h2>
       <div class="card">
         <div class="row">
           <strong>İsmira Engineering Solutions — Construction Site Manager</strong>
           <span class="muted">Jun 2018 – Aug 2024 · İzmir, Turkey</span>
         </div>
-        <ul>
-          <li>Led teams in the design, installation, commissioning, and troubleshooting of VRF systems.</li>
-          <li>Managed on‑site personnel, ensuring projects were completed on time and efficiently.</li>
-          <li>Created 3D project visualizations in SolidWorks and technical drawings in AutoCAD.</li>
-          <li>Utilized 3D printing technology to prototype equipment and validate design concepts.</li>
-        </ul>
+        <div data-i18n-html="experience.items"></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Education & Certificates</h2>
+      <h2 data-i18n="education.title">Education & Certificates</h2>
       <div class="grid">
-        <div class="card"><strong>IT School GoIT — Web Developer</strong><br><span class="muted">2024–2025</span></div>
-        <div class="card"><strong>Yaşar University — B.Sc. Electrical & Electronics</strong><br><span class="muted">2014–2019</span></div>
-        <div class="card"><strong>WTech — Process Analysis</strong><br><span class="muted">2024–2025</span></div>
-        <div class="card"><strong>Languages</strong><br><span class="muted">Turkish — Native · English — Intermediate</span></div>
+        <div class="card"><strong data-i18n="education.goit.title">IT School GoIT — Web Developer</strong><br><span class="muted">2024–2025</span></div>
+        <div class="card"><strong data-i18n="education.yasar.title">Yaşar University — B.Sc. Electrical & Electronics</strong><br><span class="muted">2014–2019</span></div>
+        <div class="card"><strong data-i18n="education.wtech.title">WTech — Process Analysis</strong><br><span class="muted">2024–2025</span></div>
+        <div class="card"><strong data-i18n="education.langs.title">Languages</strong><br><span class="muted" data-i18n="education.langs.text">Turkish — Native · English — Intermediate</span></div>
       </div>
     </section>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Berkan Görmüş — Built with HTML & CSS.</p>
+      <p data-i18n="footer.text">© <span id="year"></span> Berkan Görmüş — Built with HTML, CSS & a pinch of JS.</p>
     </footer>
   </div>
 
